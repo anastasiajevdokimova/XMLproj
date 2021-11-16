@@ -1,79 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tooded>
+<toode>
+  <nimi>Lamp</nimi>
+  <hind>20</hind>
+  <varv>must</varv>
+  <lisad>
+    <nimi>-</nimi>
+    <suurus>-</suurus>
+  </lisad>
   <toode>
-    <nimi>Diivan</nimi>
-    <hind>520</hind>
-    <varv>kollane</varv>
-    <lisad>
-      <nimi>Padjad</nimi>
-      <suurus>20x40</suurus>
-    </lisad>
-  </toode>
-  <toode>
-    <nimi>Laud</nimi>
-    <hind>200</hind>
-    <varv>pruun</varv>
-    <lisad>
-      <nimi>Kate</nimi>
-      <suurus>100x200</suurus>
-    </lisad>
-  </toode>
-  <toode>
-    <nimi>Tool</nimi>
-    <hind>50</hind>
-    <varv>valge</varv>
-    <lisad>
-      <nimi>Padjad</nimi>
-      <suurus>20x40</suurus>
-    </lisad>
-  </toode>
-  <toode>
-    <nimi>Kapp</nimi>
-    <hind>520</hind>
-    <varv>valge</varv>
-    <lisad>
-      <nimi>Lamp</nimi>
-      <suurus>20x40</suurus>
-    </lisad>
-  </toode>
-  <toode>
-    <nimi>Voodi</nimi>
-    <hind>600</hind>
+    <nimi>Lamp</nimi>
+    <hind>20</hind>
     <varv>must</varv>
     <lisad>
-      <nimi>Padjad</nimi>
-      <suurus>20x40</suurus>
+      <nimi>-</nimi>
+      <suurus>-</suurus>
     </lisad>
   </toode>
   <toode>
     <nimi>Lamp</nimi>
-    <hind>20</hind>
+    <hind>50</hind>
     <varv>valge</varv>
     <lisad>
-      <nimi>puudub</nimi>
-      <suurus>puudub</suurus>
+      <nimi>-</nimi>
+      <suurus>-</suurus>
     </lisad>
   </toode>
   <toode>
-    <nimi>Diivan</nimi>
-    <hind>1000</hind>
-    <varv>must</varv>
+    <nimi>Laud</nimi>
+    <hind>500</hind>
+    <varv>pruun</varv>
     <lisad>
-      <nimi>Padjad</nimi>
-      <suurus>30x50</suurus>
+      <nimi>Tool</nimi>
+      <suurus>-</suurus>
     </lisad>
   </toode>
   <toode>
-    <nimi>Tool</nimi>
-    <hind>70</hind>
-    <varv>must</varv>
-    <lisad>
-      <nimi>puudub</nimi>
-      <suurus>puudub</suurus>
-    </lisad>
-  </toode>
-  <toode>
-    <nimi>Diivan</nimi>
+    <nimi>Voodi</nimi>
     <hind>1000</hind>
     <varv>valge</varv>
     <lisad>
@@ -81,4 +43,13 @@
       <suurus>30x50</suurus>
     </lisad>
   </toode>
-</tooded>
+  <toode>
+    <nimi>Diivan</nimi>
+    <hind>500</hind>
+    <varv>sinine</varv>
+    <lisad>
+      <nimi>Padjad</nimi>
+      <suurus>50x50</suurus>
+    </lisad>
+  </toode>
+</toode>

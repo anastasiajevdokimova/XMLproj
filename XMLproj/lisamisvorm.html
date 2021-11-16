@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>vorm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="category-wrap">
+<ul>
+    <li>
+        <a href="lisamisvorm.html">Lisa uued andmed</a>
+    </li>
+    <li>
+        <a href="toode_salvestaminevalikuga.php">Vaata andmed</a>
+    </li>
+</ul>
+</div>
+
+<body>
+<h2>Uue andmete lisamine XML faili</h2>
+<form method="post" action="toode_salvestaminevalikuga.php">
+    <div class="container">
+    <table>
+     <tr>
+         <th>
+             <div class="aks-input-row">
+             <input type="text" class="aks-input" id="nimi" name="nimi" placeholder="Toode nimi">
+             </div>
+         </th>
+    </tr>
+        <tr>
+            <th>
+                <div class="aks-input-row">
+                <input type="text" class="aks-input" id="hind" name="hind" placeholder="Toode hind">
+                </div>
+            </th>
+        </tr>
+    <tr>
+        <th>
+            <div class="aks-input-row">
+            <input type="text" class="aks-input" id="varv" name="varv" placeholder="Toode värv">
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div class="aks-input-row">
+            <input type="text" class="aks-input" id="linimi" name="linimi" placeholder="Lisade nimi">
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div class="aks-input-row">
+            <input type="text" class="aks-input" id="lisuurus" name="lisuurus" placeholder="Lisade suurus">
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div class="aks-input-row">
+            <label for="uus_fail" class="aks-input-label">Lisa faili tooted.xml</label>
+            <input type="checkbox" class="aks-input" name="uus_fail" id="uus_fail" value="1">
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div class="aks-input-row">
+            <input type="submit" class="aks-input" id="submit" name="submit" value="Sisesta">
+            </div>
+        </th>
+    </tr>
+    </table>
+    </div>
+</form>
+</body>
+</html>

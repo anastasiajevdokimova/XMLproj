@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tooded>
-  <toode>
-    <nimi>Lamp</nimi>
-    <hind>55</hind>
-    <varv>punane</varv>
-  </toode>
-  <lisad>
-    <nimi>puudub</nimi>
-    <suurus>puudub</suurus>
-  </lisad>
-  <!-- теперь данные добавляются из формы сюда тоже -->
+<tooted>
   <toode>
     <nimi>Diivan</nimi>
     <hind>1000</hind>
-    <varv>valge</varv>
-    <linimi>Padjad</linimi>
-    <lisuurus>30x50</lisuurus>
+    <varv>must</varv>
+    <lisad>
+      <nimi>Padjad</nimi>
+      <suurus>20x20</suurus>
+    </lisad>
   </toode>
-</tooded>
+</tooted>

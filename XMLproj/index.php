@@ -28,6 +28,16 @@ if(isSet($_POST['submit'])) {
 }
 //при нажатии на конпку создается новый xml файл tooted.xml с данными, которые прописаны в коде
 if(isSet($_POST['submit'])) {
+    $xmlDoc = new DOMDocument("1.0","UTF-8");
+    $xmlDoc->preserveWhiteSpace = false;
+
+    $xml_root = $xmlDoc->createElement("xml");
+    $xmlDoc->formatOutput = true;
+    $toodenimi = $_POST['nimi'];
+    $toodehind = $_POST['hind'];
+    $toodevarv = $_POST['varv'];
+    $lisadenimi = $_POST['linimi'];
+    $lisadesuurus = $_POST['lisuurus'];
     /*создаем основную структуру xml документа
     <tooded>
         <toode>
@@ -59,12 +69,13 @@ if(isSet($_POST['submit'])) {
      *      <nimi></nimi>
      *      <suurus></suurus>
      * </lisad> */
-    $xml_toode->appendChild($xmlDoc->createElement('nimi','Lamp'));
-    $xml_toode->appendChild($xmlDoc->createElement('hind','55'));
-    $xml_toode->appendChild($xmlDoc->createElement('varv','punane'));
-    $xml_lisad->appendChild($xmlDoc->createElement('nimi','puudub'));
-    $xml_lisad->appendChild($xmlDoc->createElement('suurus','puudub'));
-    $xmlDoc->save('tooted.xml');
+    $xml_toode->appendChild($xmlDoc->createElement('nimi', $toodenimi));
+    $xml_toode->appendChild($xmlDoc->createElement('hind', $toodehind));
+    $xml_toode->appendChild($xmlDoc->createElement('varv', $toodevarv));
+    $xml_lisad->appendChild($xmlDoc->createElement('nimi', $lisadenimi));
+    $xml_lisad->appendChild($xmlDoc->createElement('suurus', $lisadesuurus));
+
+    $xmlDoc->save();
 }
 //данные из формы хаписываются в xml файл tooted.xml
 if(isset($_POST['submit'])){
@@ -87,6 +98,16 @@ if(isset($_POST['submit'])){
         $xml_toode->appendChild($kirje);
     }
     $xmlDoc->save('tooted.xml');
+}
+// Otsing toode nimi järgi
+function searchByName($query){
+    global $andmed;
+    $result=array();
+    foreach ($andmed->toode as $toode){
+        if(substr(strtolower($toode->nimi),0,strlen($query)) == strtolower($query))
+            array_push($result, $toode);
+    }
+    return $result;
 }
 ?>
 <!DOCTYPE HTML>
@@ -121,7 +142,25 @@ echo $andmed->toode[0]->nimi;
     }
     ?>
 </table>
-<h1>Vormist saadud andmete lisamine XML faili</h1>
+<h2>Otsing toodenimi järgi</h2>
+<form action="?" method="post">
+    <input type="text" id="otsing" name="otsing" placeholder="Toode nimi">
+    <input type="submit" value="Otsi">
+</form>
+<ul>
+<?php
+if(!empty($_POST["otsing"])){
+    $result=searchByName($_POST["otsing"]);
+    foreach ($result as $toode){
+        echo "<li>";
+        echo $toode->nimi. ", ". $toode->hind;
+        echo "</li>";
+    }
+}
+?>
+</ul>
+<?php
+/*<h1>Vormist saadud andmete lisamine XML faili</h1>
 <form method="post" action="">
     <input type="text" id="nimi" name="nimi" placeholder="Toode nimi">
     <br><br>
@@ -134,6 +173,7 @@ echo $andmed->toode[0]->nimi;
     <input type="text" id="lisuurus" name="lisuurus" placeholder="Lisade suurus">
     <br><br>
     <input type="submit" id="submit" name="submit" value="Sisesta">
-</form>
+</form>*/
+?>
 </body>
 </html>
